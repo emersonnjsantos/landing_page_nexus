@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  
+  --color-soft-bg: #F8F9FA;
+  --color-soft-card: #FFFFFF;
+  --color-soft-text: #2D3436;
+  --color-soft-muted: #636E72;
+  --color-accent: #0984E3;
+}
+
+@layer base {
+  body {
+    @apply bg-soft-bg text-soft-text font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
