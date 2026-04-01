@@ -3,22 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import TechStack from "./components/TechStack";
-import Contact from "./components/Contact";
+import HomePage from "./pages/HomePage";
+import ServicesPage from "./pages/ServicesPage";
+import TechnologyPage from "./pages/TechnologyPage";
+import CasesPage from "./pages/CasesPage";
+import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <TechStack />
-        <Contact />
-      </main>
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/servicos" element={<ServicesPage />} />
+            <Route path="/tecnologia" element={<TechnologyPage />} />
+            <Route path="/cases" element={<CasesPage />} />
+            <Route path="/contato" element={<ContactPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
