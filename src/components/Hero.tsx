@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Smartphone, Zap, ShieldCheck } from "lucide-react";
 
+
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">

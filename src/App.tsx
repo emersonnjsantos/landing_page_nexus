@@ -10,6 +10,7 @@ import ServicesPage from "./pages/ServicesPage";
 import TechnologyPage from "./pages/TechnologyPage";
 import CasesPage from "./pages/CasesPage";
 import ContactPage from "./pages/ContactPage";
+import GroqChatButton from "./components/GroqChatButton";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/contato" element={<ContactPage />} />
           </Routes>
         </main>
+        <GroqChatButton />
       </div>
     </Router>
   );
